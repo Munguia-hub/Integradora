@@ -24,18 +24,23 @@
         nav {
             display: flex;
             justify-content: center;
+            align-items: center;
             background-color: #444;
             padding: 10px 0;
         }
 
-        nav a {
+        nav a, .logout-button {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        nav a:hover {
-            color: #ff9800;
+        nav a:hover, .logout-button:hover {
+            background-color: #ff9800;
+            color: #fff;
         }
 
         /* Estilos de la sección de bienvenida */
@@ -119,6 +124,7 @@
         <a href="#productos">Productos</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
+        <button class="logout-button" onclick="cerrarSesion()">Cerrar Sesión</button>
     </nav>
 
     <!-- Sección de bienvenida -->
@@ -154,6 +160,14 @@
     <footer>
         <p>&copy; 2023 Almacén Principal. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function cerrarSesion() {
+            alert("Has cerrado sesión exitosamente.");
+            // Redirige al usuario al enlace especificado
+            window.location.href = 'https://munguia-hub.github.io/Integradora/Log.html';
+        }
+    </script>
 
 </body>
 </html>
